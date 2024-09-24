@@ -1,16 +1,19 @@
 // import React from "react";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
 
 const navbarStyle = {
+  //JS styling
   backgroundColor: "lightblue",
-  padding: "20px"
+  padding: "10px",
 };
 
 const Header = ({ title }) => {
   //destructuring
   return (
     <Navbar style={navbarStyle} variant="light">
-      <Navbar.Brand href="/">{title}</Navbar.Brand>
+      <Container>
+        <Navbar.Brand href="/">{title}</Navbar.Brand>
+      </Container>
     </Navbar>
   );
 };
