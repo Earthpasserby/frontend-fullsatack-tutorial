@@ -1,9 +1,8 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 
-const Header = (props) => {
+const Header = ({ title }) => {
   //destructuring
-  const { title } = props;
   return (
     <Navbar bg="light" variant="light">
       <Navbar.Brand href="/">{title}</Navbar.Brand>

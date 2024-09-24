@@ -8,7 +8,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <div>
-      <Header  title="Images Gallery 66"/>
+      <Header title="Images Gallery" />
     </div>
   );
 }
