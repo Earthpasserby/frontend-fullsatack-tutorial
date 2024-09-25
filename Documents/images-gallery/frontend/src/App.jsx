@@ -13,7 +13,8 @@ function App() {
     e.preventDefault();
     console.log(word);
   };
- console.log(word);
+    console.log(process.env);
+
   return (
     <div>
       <Header title="Images Gallery" />
