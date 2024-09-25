@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Search from "./components/Search";
 
+const UNSPLASH_KEY = import.meta.env.VITE_APP_UNSPLASH_KEY;
+
 function App() {
   const [word, setWord] = useState("");
 
@@ -13,7 +15,6 @@ function App() {
     e.preventDefault();
     console.log(word);
   };
-    console.log(process.env);
 
   return (
     <div>
