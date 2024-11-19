@@ -10,6 +10,36 @@
       }
       .nav1 {
         background-color: #1131;
+        padding: 10px;
+      }
+      .nav1 ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav1 li{
+        display: inline;
+      }
+
+      .nav1 a{
+        text-decoration: none;
+        color: #333;
+        /* background-color: #333; */
+        padding: 5px 15px;
+      }
+     .nav1 .btn1{
+      background-color: #254b25;
+      color: #fff;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+      .nav a::after{
+        
       }
     </style>
   </head>
@@ -35,7 +65,7 @@
             <li><a href="#"> Home</a></li>
             <li><a href="#"> About</a></li>
             <li><a href="#"> Products</a></li>
-            <button>Login</button>
+            <button class="btn1">Login</button>
           </ul>
         </nav>
       </div>
