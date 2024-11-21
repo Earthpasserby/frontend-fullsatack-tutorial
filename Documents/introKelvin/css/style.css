@@ -21,6 +21,19 @@ height: 100%;
 .content{
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
   padding: 2rem;
   max-width: 400px;
+}
+h1{
+  color: #333;
+  margin-bottom: 20px;
+}
+p{
+  color: #666;
+  margin-bottom: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
 }
