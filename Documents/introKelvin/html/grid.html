@@ -83,16 +83,42 @@
     <div class="container">
       <h2>2. Grid with diff col size</h2>
       <br />
-      <div class="g-container" style="grid-template-columns: repeat(3, 1fr)">
+      <div class="g-container" style="grid-template-columns: 1fr 2fr 1fr">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>3. Grid with gaps</h2>
+      <br />
+      <div
+        class="g-container"
+        style="grid-template-columns: repeat(3, 1fr); gap: 20px"
+      >
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
         <div class="box">4</div>
         <div class="box">5</div>
         <div class="box">6</div>
-        <div class="box">7</div>
-        <div class="box">8</div>
-        <div class="box">9</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>4. Grid item placement</h2>
+      <br />
+      <div
+        class="g-container"
+        style="grid-template-columns: repeat(3, 1fr); gap: 20px"
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
       </div>
     </div>
   </body>
