@@ -24,6 +24,7 @@ height: 100%;
   border-radius: 20px;
   padding: 2rem;
   max-width: 400px;
+  width: 100%;
 }
 h1{
   color: #333;
@@ -36,4 +37,24 @@ p{
 form{
   display: flex;
   flex-direction: column;
+}
+input[type="email"] {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+button{
+  padding: 0.5rem;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:  background-color 0.9s ease-in-out;
+}
+
+button:hover{
+  background-color: #7a1dd1;
 }
