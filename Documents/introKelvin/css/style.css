@@ -3,13 +3,24 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  height: 100vh;
+  height: 100%;
 }
 
 .container{
      background: linear-gradient(13deg, #8a2be2, #4169e1);
      display: flex;
+  justify-content: center; 
+align-items: center;
+height: 100%;
+}
+.content img{
+  width: 200px;
+  border-radius: 25px;
+  object-fit: contain;
 }
 .content{
-  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  max-width: 400px;
 }
