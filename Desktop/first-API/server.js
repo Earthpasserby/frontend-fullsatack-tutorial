@@ -3,9 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
-
+app.use(bodyParser.urlencoded({ extended: false }));
 
 var ingredients = [
   {
@@ -30,13 +28,22 @@ var ingredients = [
   },
 ];
 
-app.get("/", function (req, res) {
-  res.send(ingredients);
+app.get("/", function (request, response) {
+  response.send(ingredients);
+});
+app.post("/", function (request, response) {
+  var ingredient = request.body;
+  if (!ingredient || ingredient.text === "") {
+    response.status(500).send({ error: "Your indredient has no  sauce text" });
+  } else {
+    ingredients.push(ingredient);
+    response.status(200).send(ingredients);
+  }
 });
 // app.get("/Earth", function (req, res) {
 //   res.send("Yo welcome to Earth Alien!");
 // });
-// 
+//
 app.listen(3000, function () {
   console.log("First API running on port 3000!");
 });
