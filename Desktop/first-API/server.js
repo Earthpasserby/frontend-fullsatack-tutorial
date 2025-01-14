@@ -28,10 +28,10 @@ var ingredients = [
   },
 ];
 
-app.get("/", function (request, response) {
+app.get("/ingredients", function (request, response) {
   response.send(ingredients);
 });
-app.post("/", function (request, response) {
+app.post("/ingredients", function (request, response) {
   var ingredient = request.body;
   if (!ingredient || ingredient.text === "") {
     response.status(500).send({ error: "Your indredient has no  sauce text" });
@@ -44,6 +44,12 @@ app.post("/", function (request, response) {
 //   res.send("Yo welcome to Earth Alien!");
 // });
 //
+app.put("/ingredients/:ingredientId", function (request, response) {
+  var ingredientId = request.params.ingredientId;
+  var text = request.body.text;
+  for (var x = 0; x < ingredients.length; x++) {}
+});
+
 app.listen(3000, function () {
   console.log("First API running on port 3000!");
 });
