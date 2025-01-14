@@ -17,7 +17,7 @@ var ingredients = [
   {
     id: "432KAK",
     text: "Sugar",
-  },qqq
+  },
   {
     id: "532KAK",
     text: "Honey",
