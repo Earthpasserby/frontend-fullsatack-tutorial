@@ -45,7 +45,7 @@
   .swiper-pagination {
     width: 60%; /* Increase width for tablets */
     max-width: 150px; /* Adjust max width */
-    margin-left: 20px !important; /* Keep it positioned properly */
+    margin-left: 1200px !important; /* Keep it positioned properly */
   }
 }
 
@@ -54,7 +54,7 @@
   .swiper-pagination {
     width: 50%;
     margin-bottom: 80px;
-    margin-left: 1300px;
+    margin-left: 1280px !important;
     max-width: -100px !important;
     /* max-width: 160px; */
     justify-content: left !important;

@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "./components/Header";
 import ImageSlider from "./components/ImageSlider";
+import CenteredLogo from "./components/CenteredLogo";
+import Testimony from "./components/Testimony";
+import Opportunities from "./components/Opportunities";
 
 const Home = () => {
   return (
@@ -8,7 +11,10 @@ const Home = () => {
       {/* <Title title="Palynx | The People Pairing App" /> */}
       <div className="w-full h-full">
         <Header />
-        {/* <ImageSlider /> */}
+        <ImageSlider />
+        <CenteredLogo />
+        <Testimony />
+        <Opportunities />
       </div>
     </>
   );

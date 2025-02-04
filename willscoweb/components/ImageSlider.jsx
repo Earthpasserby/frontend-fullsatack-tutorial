@@ -63,7 +63,7 @@ const slides = [
 
 const ImageSlider = () => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full z-10">
       <div className="">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -80,14 +80,14 @@ const ImageSlider = () => {
                   alt={slide.title}
                   className="w-full h-screen object-cover"
                 />
-                <div className="absolute inset-0 top-[10%] md:top-[-40%] lg:top-[-20%] flex flex-col justify-center items-start px-10 mx-auto max-w-7xl  sm:px-6 lg:px-8 ">
+                <div className="absolute inset-0 top-[10%] md:top-[-40%] lg:top-[-10%] flex flex-col justify-center items-start px-10 mx-auto max-w-7xl  sm:px-6 lg:px-8 ">
                   <p className="text-red-100 text-sm font-bold  uppercase tracking-wide">
                     {slide.span}
                   </p>
-                  <h2 className="text-white text-2xl font-bold max-w-lg pt-4">
+                  <h2 className="text-white text-3xl font-bold max-w-lg pt-4">
                     {slide.title}
                   </h2>
-                  <button className="mt-4 px-8 py-3 bg-red-500 text-white rounded-4xl hover:bg-red-500">
+                  <button className="mt-4 px-8 py-3  bg-red-500 text-white rounded-4xl hover:bg-red-500">
                     {slide.buttonText}
                   </button>
                 </div>
@@ -95,10 +95,6 @@ const ImageSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className="swiper-pagination"></div> */}
-
-        {/* <div className="custom-pagination absolute bottom-10 left-4 sm:left-8 z-10 bg-[#989898 ]"></div> */}
-        {/* </div> */}
       </div>
     </div>
   );
