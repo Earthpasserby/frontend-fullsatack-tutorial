@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+/* Customize pagination bullets */
+.swiper-pagination-bullet {
+  background-color: white !important; /* Default color */
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: flex-end; /* Align dots to the right */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important; /* Active bullet color */
+  opacity: 1;
+  width: 24px !important;
+  height: 10px;
+  border-radius: 24px !important;
+}
+
+.swiper-pagination {
+  background-color: rgba(101, 101, 101, 0.34); /* Slight transparency */
+  position: absolute;
+  bottom: 0;
+  padding: 10px 20px;
+  margin-left: 40px;
+
+  display: flex;
+  justify-content: end !important; /* Align dots to the right */
+  align-items: center;
+  margin-bottom: 50px;
+  width: 50%; /* Default width for smaller screens */
+  max-width: 150px; /* Restricts max width */
+  border-radius: 24px;
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swiper-pagination {
+    width: 60%; /* Increase width for tablets */
+    max-width: 150px; /* Adjust max width */
+    margin-left: 20px !important; /* Keep it positioned properly */
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .swiper-pagination {
+    width: 50%;
+    margin-bottom: 80px;
+    margin-left: 1300px;
+    max-width: -100px !important;
+    /* max-width: 160px; */
+    justify-content: left !important;
+  }
+}
