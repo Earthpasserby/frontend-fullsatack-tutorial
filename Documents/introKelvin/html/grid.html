@@ -111,14 +111,35 @@
       <br />
       <div
         class="g-container"
-        style="grid-template-columns: repeat(3, 1fr); gap: 20px"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          grid-template-rows: repeat(3, 100px);
+        "
       >
-        <div class="box">1</div>
+        <div class="box" style="grid-column: 1/3; grid-row: 1/3">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
         <div class="box">4</div>
-        <div class="box">5</div>
-        <div class="box">6</div>
+        <div class="box" style="grid-column: 2/4">5</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>5. Grid template area</h2>
+      <br />
+      <div
+        class="g-container"
+        style="
+          grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
+          gap: 10px;
+          grid-template-rows: repeat(3, 100px);
+        "
+      >
+        <div class="box" style="grid-area: header">Header</div>
+        <div class="box" style="grid-area: sidebar">Sidebar</div>
+        <div class="box" style="grid-area: main">Main Content</div>
+        <div class="box" style="grid-area: footer">Footer</div>
       </div>
     </div>
   </body>
