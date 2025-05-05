@@ -5,58 +5,80 @@
   /* padding: 0; */
   box-sizing: border-box;
 }
-/* Customize pagination bullets */
-.swiper-pagination-bullet {
-  background-color: white !important; /* Default color */
-  opacity: 0.5;
-  width: 10px;
-  height: 10px;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: flex-end; /* Align dots to the right */
-}
 
-.swiper-pagination-bullet-active {
-  background-color: red !important; /* Active bullet color */
-  opacity: 1;
-  width: 24px !important;
-  height: 10px;
-  border-radius: 24px !important;
-}
-
+/* Default Pagination Style */
 .swiper-pagination {
-  background-color: rgba(101, 101, 101, 0.34); /* Slight transparency */
   position: absolute;
-  bottom: 0;
-  padding: 10px 20px;
-  margin-left: 40px;
-
+  bottom: 20px; /* Ensures spacing from the bottom */
+  left: 1450px !important; /* Aligns pagination to the right */
+  background-color: rgba(101, 101, 101, 0.34);
+  padding: 10px 15px;
   display: flex;
-  justify-content: end !important; /* Align dots to the right */
+  justify-content: flex-end !important;
   align-items: center;
-  margin-bottom: 50px;
-  width: 50%; /* Default width for smaller screens */
-  max-width: 150px; /* Restricts max width */
+  width: fit-content; /* Shrinks to fit content */
+  min-width: 80px; /* Ensures it doesn't get too small */
+  max-width: 120px; /* Restricts max width */
   border-radius: 24px;
+}
+
+/* Mobile (smaller than 768px) */
+@media (max-width: 767px) {
+  .swiper-pagination {
+    left: 10% !important;
+    transform: translateX(50%); /* Center the pagination */
+    width: auto;
+  }
 }
 
 /* Tablet (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .swiper-pagination {
-    width: 60%; /* Increase width for tablets */
-    max-width: 150px; /* Adjust max width */
-    margin-left: 1200px !important; /* Keep it positioned properly */
+    left: 35px !important; /* Keeps it positioned properly */
+    bottom: 20px !important;
   }
 }
 
-/* Adjustments for larger screens */
-@media (min-width: 768px) {
+/* Large Screens (1024px and above) */
+@media (min-width: 1024px) {
   .swiper-pagination {
-    width: 50%;
-    margin-bottom: 80px;
-    margin-left: 1280px !important;
-    max-width: -100px !important;
-    /* max-width: 160px; */
-    justify-content: left !important;
+    left: 1300px !important;
+    bottom: 120px !important;
   }
+}
+
+/* Customize Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important;
+  opacity: 1;
+  width: 24px !important;
+  height: 10px;
+  border-radius: 24px !important;
+}
+.Cont-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000099; /* Dark overlay */
+  z-index: 1; /* Ensure it's behind text but over the image */
+  border-radius: 35px;
+}
+
+.Cont-text {
+  position: absolute;
+  top: 30%;
+  /* left: 50px; */
+  transform: translateY(-40%);
+  z-index: 2; /* Ensures text is above overlay */
+  color: white;
 }

@@ -4,6 +4,7 @@ import ImageSlider from "./components/ImageSlider";
 import CenteredLogo from "./components/CenteredLogo";
 import Testimony from "./components/Testimony";
 import Opportunities from "./components/Opportunities";
+import Pack from "./components/Pack";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <CenteredLogo />
         <Testimony />
         <Opportunities />
+        <Pack />
       </div>
     </>
   );

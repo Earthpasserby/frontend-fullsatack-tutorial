@@ -70,7 +70,7 @@ const ImageSlider = () => {
           pagination={{ clickable: true }}
           autoplay={{ delay: 8000 }}
           loop={true}
-          className="w-full h-full sm:h-[600px] "
+          className="w-full h-full sm:h-[600px] relative"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -80,7 +80,7 @@ const ImageSlider = () => {
                   alt={slide.title}
                   className="w-full h-screen object-cover"
                 />
-                <div className="absolute inset-0 top-[10%] md:top-[-40%] lg:top-[-10%] flex flex-col justify-center items-start px-10 mx-auto max-w-7xl  sm:px-6 lg:px-8 ">
+                <div className="absolute inset-0 top-[50vh] sm:top-[20vh] md:top-[50vh] lg:top-[40vh] flex flex-col justify-center items-start px-10 mx-auto max-w-7xl sm:px-6 lg:px-8 transform -translate-y-1/2">
                   <p className="text-red-100 text-sm font-bold  uppercase tracking-wide">
                     {slide.span}
                   </p>
