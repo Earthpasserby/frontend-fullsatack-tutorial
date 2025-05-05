@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 400ms;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(160deg, #8035f0 0%, #3bd9b9 100%);
+      }
+
+      .card {
+        max-width: 300px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(2px);
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-right-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+      }
+
+      .card-image img {
+        display: flex;
+        width: 100%;
+        height: auto;
+      }
+
+      .card-title {
+        text-align: center;
+        color: #ffff;
+        font-weight: 400;
+        font-size: 1.25rem;
+        margin-top: 8px;
+      }
+
+      .card-content {
+        position: absolute;
+        right: 32px;
+        left: 32px;
+        bottom: 48px;
+        color: #ffff;
+        text-align: center;
+        font-size: 0.78rem;
+        opacity: 0;
+      }
+
+      .card:hover .card-image {
+        transform: translateY(-48px);
+      }
+
+      .card:hover .card-title {
+        transform: translateY(-60px);
+      }
+
+      .card:hover .card-image img {
+        transform: translate(-16px, -42px) rotate(-16deg) scale(1.4);
+      }
+
+      .card:hover .card-content {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://github.com/springtofigh/hover-card-effect/blob/main/nike-running-shoes.png?raw=true"
+          alt="green sport shoes"
+        />
+        <h3 class="card-title">Spoof Illustrations</h3>
+      </div>
+      <div class="card-content">Bring deals lets create fire.</div>
+    </div>
+  </body>
+</html>
