@@ -13,8 +13,24 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: linear-gradient(160deg, #8035f0 0%, #3bd9b9 100%);
-        color: bisque;
+        background: #000;
+        /* color: bisque; */
+      }
+      .responsive-div {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        color: #fff;
+        font-size: 26px;
+        background-color: #7e0a93;
+      }
+      @media (max-width: 600px) {
+        body {
+          align-items: flex-start;
+        }
+        .responsive-div {
+          background-color: #3498db;
+        }
       }
     </style>
   </head>
