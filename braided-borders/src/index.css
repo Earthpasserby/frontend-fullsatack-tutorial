@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-ink: #061f28;
+  --color-brand-blue: #0757c8;
+  --color-brand-gray: #9a9a9a;
+  --color-brand-white: #ffffff;
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #061f28;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+
+::selection { color: #ffffff; background: #0757c8; }
+
+.text-display { font-family: 'Playfair Display', serif; }
+.text-mono { font-family: 'DM Mono', monospace; }
+
+.woven-grid {
+  background-image: linear-gradient(rgba(36, 50, 43, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(36, 50, 43, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes soft-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-rise { animation: rise-in 700ms ease-out both; }
+.animate-soft-enter { animation: soft-enter 650ms ease-out both; }
+.animate-soft-enter:nth-child(2) { animation-delay: 100ms; }
+.animate-soft-enter:nth-child(3) { animation-delay: 200ms; }
+.delay-1 { animation-delay: 120ms; }
+.delay-2 { animation-delay: 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
