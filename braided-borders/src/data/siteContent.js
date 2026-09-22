@@ -80,6 +80,14 @@ export const navItems = [
 ]
 
 export const linkedInUrl = 'https://www.linkedin.com/company/braided-borders/'
+export const emailUrl = 'mailto:hello@braidedborders.com'
+export const twitterUrl = 'https://x.com/'
+
+export const socialLinks = [
+  { label: 'LinkedIn', href: linkedInUrl },
+  { label: 'Email', href: emailUrl },
+  { label: 'X / Twitter', href: twitterUrl },
+]
 
 export const heroImageUrl =
   'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80'

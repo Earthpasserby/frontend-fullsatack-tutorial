@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react'
 
-import { navItems } from '../data/siteContent'
+import { navItems, socialLinks } from '../data/siteContent'
 
 export default function Header({ menuOpen, setMenuOpen }) {
   return (
@@ -11,16 +11,32 @@ export default function Header({ menuOpen, setMenuOpen }) {
           <span className="hidden text-mono text-[10px] uppercase tracking-[0.16em] sm:block">Braided Borders</span>
         </a>
 
-        <div className="hidden items-center gap-9 text-mono text-[10px] uppercase tracking-[0.16em] md:flex">
-          {navItems.map(({ label, href, primary }) => (
-            <a
-              key={label}
-              href={href}
-              className={primary ? 'border border-white px-4 py-2 hover:bg-white hover:text-brand-ink' : 'hover:text-brand-blue'}
-            >
-              {label}
-            </a>
-          ))}
+        <div className="hidden items-center gap-6 md:flex">
+          <div className="flex items-center gap-5 text-mono text-[10px] uppercase tracking-[0.16em] text-white/80">
+            {navItems.map(({ label, href, primary }) => (
+              <a
+                key={label}
+                href={href}
+                className={primary ? 'border border-white px-4 py-2 hover:bg-white hover:text-brand-ink' : 'hover:text-brand-blue'}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 border-l border-white/20 pl-4 text-[10px] uppercase tracking-[0.16em] text-white/75">
+            {socialLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                className="transition-colors hover:text-brand-blue"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <button
@@ -51,6 +67,21 @@ export default function Header({ menuOpen, setMenuOpen }) {
                 {label}
               </a>
             ))}
+
+            <div className="mt-2 grid grid-cols-3 gap-2 border-t border-white/10 pt-3">
+              {socialLinks.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center transition-colors hover:border-brand-blue hover:bg-brand-blue/20"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       )}

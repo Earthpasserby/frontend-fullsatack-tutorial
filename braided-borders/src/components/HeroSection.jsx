@@ -4,20 +4,20 @@ import { heroImageUrl, linkedInUrl } from '../data/siteContent'
 
 export default function HeroSection() {
   return (
-    <section id="top" className="relative flex min-h-[720px] items-end overflow-hidden bg-brand-ink px-6 pb-16 pt-40 text-white md:min-h-[820px] md:px-12 md:pb-24">
+    <section id="top" className="african-panel relative flex min-h-[720px] items-end overflow-hidden bg-brand-ink px-6 pb-16 pt-40 text-white md:min-h-[820px] md:px-12 md:pb-24">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center animate-line-drift"
         style={{
           backgroundImage: `linear-gradient(90deg, rgba(3,26,37,.96), rgba(3,26,37,.54)), url('${heroImageUrl}')`,
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(7,87,200,0.25),transparent_30%)]" />
-      <div className="absolute right-8 top-40 hidden h-28 w-28 rounded-full border border-brand-blue/70 md:block" />
-      <div className="absolute bottom-10 right-10 hidden h-48 w-48 rounded-full border border-white/10 md:block" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(7,87,200,0.25),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(231,201,166,0.18),transparent_22%)]" />
+      <div className="animate-float absolute right-8 top-40 hidden h-28 w-28 rounded-full border border-brand-blue/70 md:block" />
+      <div className="animate-pulse-glow absolute bottom-10 right-10 hidden h-48 w-48 rounded-full border border-white/10 md:block" />
 
       <div className="relative mx-auto grid w-full max-w-[1440px] gap-12 md:grid-cols-[1fr_0.48fr] md:items-end">
-        <div className="max-w-[760px]">
-          <p className="text-mono mb-7 text-[10px] uppercase tracking-[0.22em] text-brand-blue">
+        <div className="max-w-[760px] animate-rise">
+          <p className="text-mono mb-7 text-[10px] uppercase tracking-[0.22em] text-brand-sand">
             Institutional bridge for MEA
           </p>
           <h1 className="text-display max-w-5xl text-[clamp(4rem,9vw,9rem)] leading-[0.83] tracking-[-0.06em] text-white">
@@ -48,8 +48,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-md shadow-[0_30px_80px_rgba(3,26,37,0.32)]">
-          <div className="border-l border-white/30 pl-6 text-mono text-[10px] uppercase leading-7 tracking-[0.16em] text-white/65">
+        <div className="african-card animate-rise rounded-2xl border border-white/15 bg-white/5 p-6 shadow-[0_30px_80px_rgba(3,26,37,0.32)] backdrop-blur-md">
+          <div className="border-l border-brand-sand/60 pl-6 text-mono text-[10px] uppercase leading-7 tracking-[0.16em] text-white/70">
             <p>
               Coverage <strong className="block font-normal text-white">Sub-Saharan Africa & MENA</strong>
             </p>
